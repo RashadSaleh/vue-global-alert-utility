@@ -9,9 +9,9 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'lib/main.js'),
-      name: 'VueComponentNpmExample',
+      name: 'GlobalAlertUtility',
       // the proper extensions will be added
-      fileName: 'vue-component-npm-example'
+      fileName: 'vue-global-alert-utility'
     },
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
