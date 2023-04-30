@@ -3,6 +3,16 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
+  "files": ["dist"],
+  "main": "./dist/vue-global-alert-utility.umd.cjs",
+  "module": "./dist/vue-global-alert-utility.js",
+  "exports": {
+    ".": {
+      "import": "./dist/vue-global-alert-utility.js",
+      "require": "./dist/vue-global-alert-utility.umd.js"
+    },
+    "./dist/style.css": "./dist/style.css"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vite build",
