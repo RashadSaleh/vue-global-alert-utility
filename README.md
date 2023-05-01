@@ -1,4 +1,14 @@
 # Vue Global Alert Utility
+A Vue.js global alert utility to replace vanilla JavaScript `alert` 
+function with better user and developer experience.
+
+## Demo
+A working demo can be found [here](https://rashadsaleh.github.io/vue-global-alert-utility/).
+
+And the demo code is [here](https://github.com/RashadSaleh/vue-global-alert-utility/blob/demo/src/App.vue), 
+in case you like the styling used in the demo and
+want to adapt it for your own project. *(Please refer to the following
+sections for how to properly import the utility in your project)*
 
 ## Why? 
 This package provides a global alert utility for your vue projects.
@@ -41,6 +51,14 @@ import { GlobalAlertUtility } from 'vue-global-alert-utility';
     <GlobalAlertUtility />
   ...
 </template>
+
+<style>
+/*
+Import the basic styles mentioned above.
+Omit if you want absolutely 0 styling by default.
+*/
+@import "vue-global-alert-utility/dist/style.css";
+</style>
 ```
 
 This is where your alerts will be placed in the DOM. 
@@ -52,7 +70,7 @@ Finally, start creating alerts from anywhere in your code:
 <script>
 import { GlobalAlertUtility as Alert } from 'vue-global-alert-utility';
 
-Alert.info("This is a success alert!");
+Alert.info("This is an info alert!");
 Alert.success("This is a success alert!");
 Alert.error("This is an error alert!");
 </script>
@@ -92,6 +110,7 @@ To style the close button for an alert:
 #global-alerts-container dialog.alert > button {
     background-color: white;
     color: red;
+    border: none;
 }
 ```
 
@@ -104,21 +123,24 @@ element.
 
 Which means you can do something like this:
 ```css
-.list-move, /* apply transition to moving elements */
-.list-enter-active,
-.list-leave-active {
+.global-alert-move, /* apply transition to moving elements */
+.global-alert-enter-active,
+.global-alert-leave-active {
     transition: all 0.5s ease-in-out;
 }
 
-.list-enter-from,
-.list-leave-to {
+.global-alert-enter-from,
+.global-alert-leave-to {
     opacity: 0;
     transform: translateY(-30px);
 }
 
 /* ensure leaving items are taken out of layout flow so that moving
    animations can be calculated correctly. */
-.list-leave-active {
+.global-alert-leave-active {
     position: absolute !important;
 }
+
 ```
+
+Finally, the basic styles included with the library support RTL layouts out of the box.
