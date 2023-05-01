@@ -62,7 +62,7 @@ export default {
 </script>
 
 <template>
-    <transition-group tag="div" id="global-alerts-container" name="global-alert">
+    <transition-group dir="rtl" tag="div" id="global-alerts-container" name="global-alert">
         <dialog v-for="alert in alerts" :class="['alert', alert.type]" :key="alert.id" open>
             {{ alert.msg }}
             <button @click="alert.close()">×</button>
@@ -79,8 +79,15 @@ export default {
     max-width: 90vw;
 }
 
-[dir="rtl"] #global-alerts-container dialog.alert {
+[dir="rtl"] #global-alerts-container dialog.alert,
+#global-alerts-container[dir="rtl"] dialog.alert {
     translate: 50%;
+}
+
+[dir="rtl"] #global-alerts-container dialog.alert > button,
+#global-alerts-container[dir="rtl"] dialog.alert > button {
+    left: 0;
+    right: initial;
 }
 
 #global-alerts-container {
