@@ -62,7 +62,7 @@ export default {
 </script>
 
 <template>
-    <transition-group dir="rtl" tag="div" id="global-alerts-container" name="global-alert">
+    <transition-group tag="div" id="global-alerts-container" name="global-alert">
         <dialog v-for="alert in alerts" :class="['alert', alert.type]" :key="alert.id" open>
             {{ alert.msg }}
             <button @click="alert.close()">×</button>
