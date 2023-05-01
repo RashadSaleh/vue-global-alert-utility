@@ -79,6 +79,10 @@ export default {
     max-width: 90vw;
 }
 
+[dir="rtl"] #global-alerts-container dialog.alert {
+    translate: 50%;
+}
+
 #global-alerts-container {
     position: fixed;
     left: 50%;
