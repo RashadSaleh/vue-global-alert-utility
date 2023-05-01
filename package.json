@@ -1,6 +1,5 @@
 {
   "name": "vue-global-alert-utility",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "files": ["dist"],
