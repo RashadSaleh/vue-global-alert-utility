@@ -144,3 +144,6 @@ Which means you can do something like this:
 ```
 
 Finally, the basic styles included with the library support RTL layouts out of the box.
+
+## Contributing
+Feel free to open an issue to report bugs, ask questions or request features. Pull requests are definitely welcome as well!
